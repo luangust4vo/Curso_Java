@@ -122,4 +122,17 @@ public class Crud {
             exception.printStackTrace();
         }
     }
+
+    private static boolean temVeiculo(){
+        try{
+            PreparedStatement stm = connection.preparedStatement(
+                    "SELECT * FROM veiculos WHERE codigo = ?"
+            );
+            stm.setInt(1, codigo);
+            ResultSet resultSet = stm.executeQuery();
+        }catch(SQLException exception){
+            exception.printStackTrace();
+            return false;
+        }
+    }
 }
