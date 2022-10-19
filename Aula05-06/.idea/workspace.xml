@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="275a5bf7-1dd5-4c6e-b655-b8ccce6330b7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/.idea/libraries/mysql_connector_java_8_0_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/AplicativoLogin.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/out/production/AplicativoLogin/Armazenamento/Persistencia.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/out/production/AplicativoLogin/Modelos/Pessoa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/out/production/AplicativoLogin/Principal/Aplicativo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/src/Armazenamento/Persistencia.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/src/Modelos/Pessoa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/src/Principal/Aplicativo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/src/Telas/TelaCadastro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/src/Telas/TelaPrincipal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aula05/mysql-connector-java-8.0.30.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Curso_Java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplicativoLogin/src/Telas/TelaLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/AplicativoLogin/src/Telas/TelaLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AplicativoLogin/src/Telas/TelaMudarSenha.java" beforeDir="false" afterPath="$PROJECT_DIR$/AplicativoLogin/src/Telas/TelaMudarSenha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aula05/AplicativoLogin/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

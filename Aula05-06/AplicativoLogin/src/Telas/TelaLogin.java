@@ -57,17 +57,18 @@ public class TelaLogin {
                 return;
             }
             if(!Persistencia.temCadastro(usuario)) {
-                label.setVisible(true);
-                return;
-            }
-            Pessoa pessoa = Persistencia.pessoas.get(textoUsuario.getText().toLowerCase());
-            if(textoSenha.getText().equals(pessoa.senha)){
-                TelaUsuario telaUsuario = new TelaUsuario(pessoa, telaPrincipal);
-                telaUsuario.abrirTela();
-                fecharTela();
+                Pessoa pessoa = Persistencia.pessoas.get(textoUsuario.getText().toLowerCase());
+                if(textoSenha.getText().equals(pessoa.senha)){
+                    TelaUsuario telaUsuario = new TelaUsuario(pessoa, telaPrincipal);
+                    telaUsuario.abrirTela();
+                    fecharTela();
+                }else {
+                    label.setText("A senha está incorreta");
+                    label.setVisible(true);
+                }
             }else {
-                label.setText("A senha está incorreta");
                 label.setVisible(true);
+                label.setText("Não há login com este usuário.");
             }
         });
         painel.add(botaoLogar);
