@@ -1,23 +1,25 @@
 package Models;
 
+
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class KeyBoard extends KeyAdapter {
+public class Keyboard extends KeyAdapter {
 
     Player player;
 
-    public KeyBoard(Player player){
+    public Keyboard(Player player) {
         this.player = player;
     }
 
     @Override
-    public void keyPressed(KeyEvent e) {
-        player.keyDown(e);
+    public void keyPressed(KeyEvent event) {
+        player.keyPressed(event);
     }
 
+
     @Override
-    public void keyReleased(KeyEvent e) {
-        player.keyUp(e);
+    public void keyReleased(KeyEvent event) {
+        player.keyReleased(event);
     }
 }

@@ -3,29 +3,39 @@ package Models;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 public class Player {
 
-    //Sprite
     Image image;
 
-    //Posicionamento nos eixos x e y
     int x;
     int y;
 
-    //Variável que representa a velocidade do player no eixo Y(para movimentação)
     int velocityY;
 
-    //Propriedades do sprite do jogador
     int width;
     int height;
 
-    public Player(){
+    ArrayList<Shot> shots;
+
+    public Player() {
         x = 100;
         y = 100;
+
+        shots = new ArrayList<>();
     }
 
-    public void load(){
+    public Rectangle getBounds(){
+        return new Rectangle(x, y, width, height);
+    }
+
+    public void shoot() {
+        shots.add(new Shot(x, y + (height/2)));
+    }
+
+    public void load() {
         ImageIcon reference = new ImageIcon("res/player.png");
         image = reference.getImage();
 
@@ -33,35 +43,34 @@ public class Player {
         height = image.getHeight(null);
     }
 
-    public void update(){
-        if(y <= 0){
-            y += 10;
-        } else if (y >= 655) {
-            y -= 10;
+    public void update() {
+        if(y <= 0) {
+            y+=5;
+        }else if(y >= 330) {
+            y-=5;
         }
         y += velocityY;
     }
 
-    /*
-    * Métodos referentes aos eventos do teclado. No caso, o pressionamento das teclas CIMA e BAIXO
-    * */
-    public void keyDown(KeyEvent event){
+    public void keyPressed(KeyEvent event) {
         int key = event.getKeyCode();
-
-        if(key == KeyEvent.VK_UP){
+        if(key == KeyEvent.VK_UP || key == KeyEvent.VK_W) {
             velocityY = -4;
-        } else if (key == KeyEvent.VK_DOWN) {
+        }else if(key == KeyEvent.VK_DOWN || key == KeyEvent.VK_S) {
             velocityY = 4;
         }
     }
 
-    public void keyUp(KeyEvent event){
+    public void keyReleased(KeyEvent event) {
         int key = event.getKeyCode();
-
-        if(key == KeyEvent.VK_UP){
+        if(key == KeyEvent.VK_UP || key == KeyEvent.VK_W) {
             velocityY = 0;
-        } else if (key == KeyEvent.VK_DOWN) {
+        }else if(key == KeyEvent.VK_DOWN || key == KeyEvent.VK_S) {
             velocityY = 0;
+        }else if(key == KeyEvent.VK_SPACE) {
+            shoot();
         }
     }
+
+
 }

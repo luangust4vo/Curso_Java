@@ -5,28 +5,45 @@ import java.awt.*;
 
 public class Shot {
 
-    //Sprite do tiro
     Image image;
 
-    //Posicionamento da bala os eixos X e Y
     int x;
     int y;
 
-    //Propriedades do sprite do tiro
+    int velocityX;
+
     int width;
     int height;
+
     boolean visible;
 
-    //Distância máxima do tiro
     int max_X;
 
-    public Shot(){
+    public Shot(int x, int y) {
         this.x = x;
         this.y = y;
+
+        visible = true;
+        max_X = 300;
+        velocityX = 4;
     }
 
-    public void load(){
+    public void load() {
         ImageIcon reference = new ImageIcon("res/shot.png");
         image = reference.getImage();
+
+        width = image.getWidth(null);
+        height = image.getHeight(null);
+    }
+
+    public Rectangle getBounds(){
+        return new Rectangle(x, y, width, height);
+    }
+
+    public void update() {
+        x += velocityX;
+        if(x >= max_X) {
+            visible = false;
+        }
     }
 }
